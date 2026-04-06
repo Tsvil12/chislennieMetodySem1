@@ -3,7 +3,7 @@ from scipy.optimize import minimize_scalar
 import math
 
 def f(x):
-    return math.cos(5 * x**2)  # Ваша функция
+    return math.cos(5 * x**2) 
 
 def f_2nd_derivative(x):
     # Вторая производная для cos(5x²)
@@ -13,7 +13,7 @@ def f_2nd_derivative(x):
     return -10 * math.sin(5 * x**2) - 100 * x**2 * math.cos(5 * x**2)
 
 a = 0
-b = 5  # Ваш интервал
+b = 5  
 epsilon = 1e-6
 n = 1
 
@@ -36,7 +36,7 @@ while True:
     x = np.linspace(a, b - h, n)  # Левые границы
     fx = [f(xi) for xi in x]
     
-    # Применяем метод прямоугольников (левых)
+    # Применяем метод прямоугольников 
     I_rect = sum(fx) * h
     break
 
